@@ -1,6 +1,6 @@
 # RealTimePicker
 
-### RealTimePicker is an elegant and customizable time (hour, minute, second) picker written in Swift.
+### RealTimePicker is an elegant and customizable time picker written in Swift.
 
 <p align="center">
     <img src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/hour_min_screen.png" width="35%" height="35%" alt="Screenshot Preview" />
@@ -26,7 +26,7 @@ pod 'RealTimePicker'
 
 ## Usage
 
-RealTimePickerView was designed over UIPickerView and can be customize by your own needs. Simply create `RealTimePickerView()` in the same way you would expect to present `UIPickerView` and user as a subview.
+RealTimePickerView was designed over UIPickerView and can be customize by your own needs. You can use it to pick time (hour, minute), show current time with seconds and animate as countdown. Simply create `RealTimePickerView()` in the same way you would expect to present `UIPickerView` and user as a subview.
 
 ```swift
 let view = RealTimePickerView()
