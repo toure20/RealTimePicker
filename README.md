@@ -3,7 +3,7 @@
 ### RealTimePicker is an elegant and customizable time (hour, minute, second) picker written in Swift.
 
 <p align="center">
-    <img src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/hour_min_screen.png" width="30%" height="30%" alt="Screenshot Preview" />
+    <img src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/hour_min_screen.png" width="35%" height="35%" alt="Screenshot Preview" />
 </p>
 
 <p align="center">
