@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8426FF2C28154646007B8AFE /* RealTimePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8426FF2328154646007B8AFE /* RealTimePicker.framework */; };
+		8426FF3128154646007B8AFE /* RealTimePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF3028154646007B8AFE /* RealTimePickerTests.swift */; };
+		8426FF3228154646007B8AFE /* RealTimePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8426FF2628154646007B8AFE /* RealTimePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8426FF42281547FE007B8AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF41281547FE007B8AFE /* AppDelegate.swift */; };
+		8426FF44281547FE007B8AFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF43281547FE007B8AFE /* SceneDelegate.swift */; };
+		8426FF46281547FE007B8AFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF45281547FE007B8AFE /* ViewController.swift */; };
+		8426FF49281547FE007B8AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8426FF47281547FE007B8AFE /* Main.storyboard */; };
+		8426FF4B281547FF007B8AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8426FF4A281547FF007B8AFE /* Assets.xcassets */; };
+		8426FF4E281547FF007B8AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8426FF4C281547FF007B8AFE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8426FF2D28154646007B8AFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8426FF1A28154646007B8AFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8426FF2228154646007B8AFE;
+			remoteInfo = RealTimePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8426FF2328154646007B8AFE /* RealTimePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealTimePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8426FF2628154646007B8AFE /* RealTimePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealTimePicker.h; sourceTree = "<group>"; };
+		8426FF2B28154646007B8AFE /* RealTimePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealTimePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8426FF3028154646007B8AFE /* RealTimePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePickerTests.swift; sourceTree = "<group>"; };
+		8426FF3F281547FE007B8AFE /* RealTimePickerExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealTimePickerExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8426FF41281547FE007B8AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8426FF43281547FE007B8AFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8426FF45281547FE007B8AFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8426FF48281547FE007B8AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8426FF4A281547FF007B8AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8426FF4D281547FF007B8AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8426FF4F28154800007B8AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8426FF2028154646007B8AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8426FF2828154646007B8AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8426FF2C28154646007B8AFE /* RealTimePicker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8426FF3C281547FE007B8AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8426FF1928154646007B8AFE = {
+			isa = PBXGroup;
+			children = (
+				8426FF2528154646007B8AFE /* RealTimePicker */,
+				8426FF2F28154646007B8AFE /* RealTimePickerTests */,
+				8426FF40281547FE007B8AFE /* RealTimePickerExamples */,
+				8426FF2428154646007B8AFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8426FF2428154646007B8AFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8426FF2328154646007B8AFE /* RealTimePicker.framework */,
+				8426FF2B28154646007B8AFE /* RealTimePickerTests.xctest */,
+				8426FF3F281547FE007B8AFE /* RealTimePickerExamples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8426FF2528154646007B8AFE /* RealTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				8426FF2628154646007B8AFE /* RealTimePicker.h */,
+			);
+			path = RealTimePicker;
+			sourceTree = "<group>";
+		};
+		8426FF2F28154646007B8AFE /* RealTimePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8426FF3028154646007B8AFE /* RealTimePickerTests.swift */,
+			);
+			path = RealTimePickerTests;
+			sourceTree = "<group>";
+		};
+		8426FF40281547FE007B8AFE /* RealTimePickerExamples */ = {
+			isa = PBXGroup;
+			children = (
+				8426FF41281547FE007B8AFE /* AppDelegate.swift */,
+				8426FF43281547FE007B8AFE /* SceneDelegate.swift */,
+				8426FF45281547FE007B8AFE /* ViewController.swift */,
+				8426FF47281547FE007B8AFE /* Main.storyboard */,
+				8426FF4A281547FF007B8AFE /* Assets.xcassets */,
+				8426FF4C281547FF007B8AFE /* LaunchScreen.storyboard */,
+				8426FF4F28154800007B8AFE /* Info.plist */,
+			);
+			path = RealTimePickerExamples;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8426FF1E28154646007B8AFE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8426FF3228154646007B8AFE /* RealTimePicker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8426FF2228154646007B8AFE /* RealTimePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8426FF3528154646007B8AFE /* Build configuration list for PBXNativeTarget "RealTimePicker" */;
+			buildPhases = (
+				8426FF1E28154646007B8AFE /* Headers */,
+				8426FF1F28154646007B8AFE /* Sources */,
+				8426FF2028154646007B8AFE /* Frameworks */,
+				8426FF2128154646007B8AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealTimePicker;
+			productName = RealTimePicker;
+			productReference = 8426FF2328154646007B8AFE /* RealTimePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8426FF2A28154646007B8AFE /* RealTimePickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8426FF3828154646007B8AFE /* Build configuration list for PBXNativeTarget "RealTimePickerTests" */;
+			buildPhases = (
+				8426FF2728154646007B8AFE /* Sources */,
+				8426FF2828154646007B8AFE /* Frameworks */,
+				8426FF2928154646007B8AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8426FF2E28154646007B8AFE /* PBXTargetDependency */,
+			);
+			name = RealTimePickerTests;
+			productName = RealTimePickerTests;
+			productReference = 8426FF2B28154646007B8AFE /* RealTimePickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8426FF3E281547FE007B8AFE /* RealTimePickerExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8426FF5028154800007B8AFE /* Build configuration list for PBXNativeTarget "RealTimePickerExamples" */;
+			buildPhases = (
+				8426FF3B281547FE007B8AFE /* Sources */,
+				8426FF3C281547FE007B8AFE /* Frameworks */,
+				8426FF3D281547FE007B8AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealTimePickerExamples;
+			productName = RealTimePickerExamples;
+			productReference = 8426FF3F281547FE007B8AFE /* RealTimePickerExamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8426FF1A28154646007B8AFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					8426FF2228154646007B8AFE = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					8426FF2A28154646007B8AFE = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					8426FF3E281547FE007B8AFE = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8426FF1D28154646007B8AFE /* Build configuration list for PBXProject "RealTimePicker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8426FF1928154646007B8AFE;
+			productRefGroup = 8426FF2428154646007B8AFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8426FF2228154646007B8AFE /* RealTimePicker */,
+				8426FF2A28154646007B8AFE /* RealTimePickerTests */,
+				8426FF3E281547FE007B8AFE /* RealTimePickerExamples */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8426FF2128154646007B8AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8426FF2928154646007B8AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8426FF3D281547FE007B8AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8426FF4E281547FF007B8AFE /* LaunchScreen.storyboard in Resources */,
+				8426FF4B281547FF007B8AFE /* Assets.xcassets in Resources */,
+				8426FF49281547FE007B8AFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8426FF1F28154646007B8AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8426FF2728154646007B8AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8426FF3128154646007B8AFE /* RealTimePickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8426FF3B281547FE007B8AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8426FF46281547FE007B8AFE /* ViewController.swift in Sources */,
+				8426FF42281547FE007B8AFE /* AppDelegate.swift in Sources */,
+				8426FF44281547FE007B8AFE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8426FF2E28154646007B8AFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8426FF2228154646007B8AFE /* RealTimePicker */;
+			targetProxy = 8426FF2D28154646007B8AFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8426FF47281547FE007B8AFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8426FF48281547FE007B8AFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8426FF4C281547FF007B8AFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8426FF4D281547FF007B8AFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8426FF3328154646007B8AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8426FF3428154646007B8AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8426FF3628154646007B8AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alash.RealTimePicker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8426FF3728154646007B8AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alash.RealTimePicker;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8426FF3928154646007B8AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alash.RealTimePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8426FF3A28154646007B8AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alash.RealTimePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8426FF5128154800007B8AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RealTimePickerExamples/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alash.RealTimePickerExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8426FF5228154800007B8AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RealTimePickerExamples/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alash.RealTimePickerExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8426FF1D28154646007B8AFE /* Build configuration list for PBXProject "RealTimePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8426FF3328154646007B8AFE /* Debug */,
+				8426FF3428154646007B8AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8426FF3528154646007B8AFE /* Build configuration list for PBXNativeTarget "RealTimePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8426FF3628154646007B8AFE /* Debug */,
+				8426FF3728154646007B8AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8426FF3828154646007B8AFE /* Build configuration list for PBXNativeTarget "RealTimePickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8426FF3928154646007B8AFE /* Debug */,
+				8426FF3A28154646007B8AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8426FF5028154800007B8AFE /* Build configuration list for PBXNativeTarget "RealTimePickerExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8426FF5128154800007B8AFE /* Debug */,
+				8426FF5228154800007B8AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8426FF1A28154646007B8AFE /* Project object */;
+}
