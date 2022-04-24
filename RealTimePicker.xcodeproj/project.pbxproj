@@ -11,11 +11,11 @@
 		8426FF3128154646007B8AFE /* RealTimePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF3028154646007B8AFE /* RealTimePickerTests.swift */; };
 		8426FF3228154646007B8AFE /* RealTimePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8426FF2628154646007B8AFE /* RealTimePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8426FF42281547FE007B8AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF41281547FE007B8AFE /* AppDelegate.swift */; };
-		8426FF44281547FE007B8AFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF43281547FE007B8AFE /* SceneDelegate.swift */; };
-		8426FF46281547FE007B8AFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF45281547FE007B8AFE /* ViewController.swift */; };
-		8426FF49281547FE007B8AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8426FF47281547FE007B8AFE /* Main.storyboard */; };
+		8426FF46281547FE007B8AFE /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF45281547FE007B8AFE /* ExampleViewController.swift */; };
 		8426FF4B281547FF007B8AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8426FF4A281547FF007B8AFE /* Assets.xcassets */; };
 		8426FF4E281547FF007B8AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8426FF4C281547FF007B8AFE /* LaunchScreen.storyboard */; };
+		8426FF5428154B96007B8AFE /* RealTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF5328154B96007B8AFE /* RealTimePickerView.swift */; };
+		8426FF5628154E2A007B8AFE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FF5528154E2A007B8AFE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +35,12 @@
 		8426FF3028154646007B8AFE /* RealTimePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePickerTests.swift; sourceTree = "<group>"; };
 		8426FF3F281547FE007B8AFE /* RealTimePickerExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealTimePickerExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8426FF41281547FE007B8AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8426FF43281547FE007B8AFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8426FF45281547FE007B8AFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8426FF48281547FE007B8AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8426FF45281547FE007B8AFE /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		8426FF4A281547FF007B8AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8426FF4D281547FF007B8AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8426FF4F28154800007B8AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8426FF5328154B96007B8AFE /* RealTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePickerView.swift; sourceTree = "<group>"; };
+		8426FF5528154E2A007B8AFE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				8426FF2628154646007B8AFE /* RealTimePicker.h */,
+				8426FF5328154B96007B8AFE /* RealTimePickerView.swift */,
+				8426FF5528154E2A007B8AFE /* Extensions.swift */,
 			);
 			path = RealTimePicker;
 			sourceTree = "<group>";
@@ -109,9 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				8426FF41281547FE007B8AFE /* AppDelegate.swift */,
-				8426FF43281547FE007B8AFE /* SceneDelegate.swift */,
-				8426FF45281547FE007B8AFE /* ViewController.swift */,
-				8426FF47281547FE007B8AFE /* Main.storyboard */,
+				8426FF45281547FE007B8AFE /* ExampleViewController.swift */,
 				8426FF4A281547FF007B8AFE /* Assets.xcassets */,
 				8426FF4C281547FF007B8AFE /* LaunchScreen.storyboard */,
 				8426FF4F28154800007B8AFE /* Info.plist */,
@@ -198,6 +198,7 @@
 				TargetAttributes = {
 					8426FF2228154646007B8AFE = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 					};
 					8426FF2A28154646007B8AFE = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -248,7 +249,6 @@
 			files = (
 				8426FF4E281547FF007B8AFE /* LaunchScreen.storyboard in Resources */,
 				8426FF4B281547FF007B8AFE /* Assets.xcassets in Resources */,
-				8426FF49281547FE007B8AFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8426FF5428154B96007B8AFE /* RealTimePickerView.swift in Sources */,
+				8426FF5628154E2A007B8AFE /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8426FF46281547FE007B8AFE /* ViewController.swift in Sources */,
+				8426FF46281547FE007B8AFE /* ExampleViewController.swift in Sources */,
 				8426FF42281547FE007B8AFE /* AppDelegate.swift in Sources */,
-				8426FF44281547FE007B8AFE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,14 +292,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8426FF47281547FE007B8AFE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8426FF48281547FE007B8AFE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8426FF4C281547FF007B8AFE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,6 +426,7 @@
 		8426FF3628154646007B8AFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -442,6 +436,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,7 +446,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alash.RealTimePicker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,6 +457,7 @@
 		8426FF3728154646007B8AFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -469,6 +467,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alash.RealTimePicker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -487,6 +487,7 @@
 		8426FF3928154646007B8AFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -502,6 +503,7 @@
 		8426FF3A28154646007B8AFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -525,9 +527,9 @@
 				INFOPLIST_FILE = RealTimePickerExamples/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,9 +554,9 @@
 				INFOPLIST_FILE = RealTimePickerExamples/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
