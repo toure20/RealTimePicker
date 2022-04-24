@@ -41,4 +41,4 @@ Check out the [Sample App](https://github.com/toure20/RealTimePicker/tree/master
 
 ## License
 
-<b>PanModal</b> is released under a MIT License. See LICENSE file for details.
+<b>RealTimePicker</b> is released under a MIT License. See LICENSE file for details.
