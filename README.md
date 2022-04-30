@@ -26,7 +26,7 @@ pod 'RealTimePicker'
 
 ## Usage
 
-RealTimePickerView was designed over UIPickerView and can be customize by your own needs. You can use it to pick time (hour, minute), show current time with seconds and animate as countdown. Simply create `RealTimePickerView()` in the same way you would expect to present `UIPickerView` and user as a subview.
+RealTimePickerView was designed over UIPickerView and can be used to pick time (hour, minute). Simply create `RealTimePickerView()` in the same way you would expect to present `UIPickerView` and user as a subview.
 
 ```swift
 let view = RealTimePickerView()
