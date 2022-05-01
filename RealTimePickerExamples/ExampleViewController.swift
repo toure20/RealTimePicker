@@ -19,9 +19,9 @@ class ExampleViewController: UIViewController {
     
     private var timePicker: RealTimePickerView = {
         let view = RealTimePickerView()
-        view.rowHeight = 80 // default row height is 80
-        view.colonLabelFont = UIFont.systemFont(ofSize: 40, weight: .bold) // default size is 40
-        view.timeLabelFont = UIFont.systemFont(ofSize: 54, weight: .semibold) // default size is 54
+        view.rowHeight = 60 // default row height is 80
+        view.colonLabelFont = UIFont.systemFont(ofSize: 32, weight: .bold) // default size is 40
+        view.timeLabelFont = UIFont.systemFont(ofSize: 44, weight: .semibold) // default size is 54
         return view
     }()
     
@@ -39,7 +39,7 @@ class ExampleViewController: UIViewController {
         timePicker.translatesAutoresizingMaskIntoConstraints = false
         timePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         timePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        timePicker.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6).isActive = true
+        timePicker.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
         
         view.addSubview(selectedLabel)
         selectedLabel.translatesAutoresizingMaskIntoConstraints = false

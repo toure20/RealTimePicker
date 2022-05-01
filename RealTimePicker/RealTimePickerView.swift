@@ -31,18 +31,14 @@ open class RealTimePickerView: UIView {
         static let colorFontSize: CGFloat = 40
     }
     
-    public enum HourFormat: Int {
-        case h12 = 12
-        case h24 = 24
-        
-        var hours: [Int] {
-            Array(0...self.rawValue)
-        }
+    public enum HourFormat: String, CaseIterable {
+        case am = "AM"
+        case pm = "PM"
     }
     public enum TimeComponent: Int, CaseIterable {
         case hour = 0
         case minute = 1
-        case second = 2
+        case format = 2
     }
     
     // MARK: - Public properties
@@ -65,15 +61,14 @@ open class RealTimePickerView: UIView {
     
     // MARK: - Private properties
     private var components: [TimeComponent]
-    private var hourFormat: HourFormat
     
-    private var hours: [Int] = Array(0...24)
+    private var hours: [Int] = Array(1...12)
     private var minutes: [Int] = Array(0...60)
-    private var seconds: [Int] = Array(0...60)
+    private var formats: [HourFormat] = HourFormat.allCases
     
     private var selectedHour: Int?
     private var selectedMinute: Int?
-    private var selectedSecond: Int?
+    private var selectedHourFormat: HourFormat?
     
     // MARK: - Views
     public var pickerView: UIPickerView = {
@@ -88,11 +83,10 @@ open class RealTimePickerView: UIView {
         return label
     }()
     
-    public init(components: [TimeComponent] = [.hour, .minute], format: HourFormat = .h24) {
+    private var leftConstraintAnchor: NSLayoutConstraint?
+    
+    public init(components: [TimeComponent] = [.hour, .minute, .format]) {
         self.components = components
-        self.hourFormat = format
-        self.hours = format.hours
-        
         super.init(frame: .zero)
         setupViews()
         setupCurrentTime()
@@ -100,6 +94,14 @@ open class RealTimePickerView: UIView {
     
     required public init?(coder: NSCoder) {
         nil
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        guard !components.isEmpty else { return }
+        let offset = (frame.width / CGFloat(components.count)) - 2
+        leftConstraintAnchor?.constant = offset
+        leftConstraintAnchor?.isActive = true
     }
     
     open func setupViews() {
@@ -110,12 +112,11 @@ open class RealTimePickerView: UIView {
         pickerView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         pickerView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
-        if components.count == 2 {
-            pickerView.addSubview(colonLabel)
-            colonLabel.translatesAutoresizingMaskIntoConstraints = false
-            colonLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-            colonLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        }
+        pickerView.addSubview(colonLabel)
+        colonLabel.translatesAutoresizingMaskIntoConstraints = false
+        colonLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        leftConstraintAnchor = colonLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 0)
         
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -124,9 +125,14 @@ open class RealTimePickerView: UIView {
     open func setupCurrentTime() {
         let currentTime = Calendar.current.dateComponents([.hour, .minute, .second], from: Date())
         if var hour = currentTime.hour, components.count > TimeComponent.hour.rawValue {
-            if hourFormat == .h12 && hour >= 12 {
+            if hour < 12 {
+                hour += 11
+                selectedHourFormat = .am
+            } else {
+                selectedHourFormat = .pm
                 hour -= 12
             }
+            print(hour)
             pickerView.selectRow(hour, inComponent: TimeComponent.hour.rawValue, animated: true)
             selectedHour = hour
         }
@@ -134,9 +140,13 @@ open class RealTimePickerView: UIView {
             pickerView.selectRow(minute, inComponent: TimeComponent.minute.rawValue, animated: true)
             selectedMinute = minute
         }
-        if let second = currentTime.second, components.count > TimeComponent.second.rawValue {
-            pickerView.selectRow(second, inComponent: TimeComponent.second.rawValue, animated: true)
-            selectedSecond = second
+        switch selectedHourFormat {
+        case .am:
+            pickerView.selectRow(0, inComponent: TimeComponent.format.rawValue, animated: true)
+        case .pm:
+            pickerView.selectRow(1, inComponent: TimeComponent.format.rawValue, animated: true)
+        default:
+            break
         }
     }
 }
@@ -152,14 +162,14 @@ extension RealTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
             return hours.count
         case .minute:
             return minutes.count
-        case .second:
-            return seconds.count
+        case .format:
+            return formats.count
         }
     }
     
     public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize:  Constants.fontSize, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: Constants.fontSize, weight: .semibold)
         label.textAlignment = .center
         if let customFont = timeLabelFont {
             label.font = customFont
@@ -169,8 +179,9 @@ extension RealTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
             label.text = String(format: "%02d", hours[row])
         case .minute:
             label.text = String(format: "%02d", minutes[row])
-        case .second:
-            label.text = String(format: "%02d", seconds[row])
+        case .format:
+            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+            label.text = formats[row].rawValue
         }
         return label
     }
@@ -185,14 +196,20 @@ extension RealTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
             self.selectedHour = hours[safe: row]
         case .minute:
             self.selectedMinute = minutes[safe: row]
-        case .second:
-            self.selectedSecond = seconds[safe: row]
+        case .format:
+            self.selectedHourFormat = formats[safe: row]
         }
+        guard var hour = selectedHour, let minute = selectedMinute else { return }
         var calendar = Calendar.current
         calendar.timeZone = .current
-        let second = selectedSecond ?? 0
-        guard let hour = selectedHour, let minute = selectedMinute,
-              let date = calendar.date(bySettingHour: hour, minute: minute, second: second, of:  Date()) else {
+        switch selectedHourFormat {
+        case .pm:
+            hour += 11
+        default:
+            break
+        }
+        print(hour, minute)
+        guard let date = calendar.date(bySettingHour: hour, minute: minute, second: 0, of:  Date()) else {
             return
         }
         onDateTimePicked?(date)
