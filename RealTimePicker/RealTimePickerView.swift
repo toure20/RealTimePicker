@@ -102,17 +102,19 @@ open class RealTimePickerView: UIView {
         let label = UILabel()
         let size = Constants.colonFontSize
         label.font = UIFont.systemFont(ofSize: size, weight: .bold)
+        label.textColor = tintColor
         label.text = ":"
         return label
     }()
     
     private var leftConstraintAnchor: NSLayoutConstraint?
     
-    public init(format: TimeFormat = .h24) {
+    public init(format: TimeFormat = .h24, tintColor: UIColor = .black) {
         self.timeFormat = format
         self.components = format.components
         self.hours = format.hours
         super.init(frame: .zero)
+        self.tintColor = tintColor
         setupViews()
         setupCurrentTime()
     }
@@ -201,6 +203,7 @@ extension RealTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
     public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel()
         label.textAlignment = .center
+        label.textColor = tintColor
         label.font = timeLabelFont ?? UIFont.systemFont(ofSize: Constants.fontSize, weight: .semibold)
         switch components[component]  {
         case .hour:
