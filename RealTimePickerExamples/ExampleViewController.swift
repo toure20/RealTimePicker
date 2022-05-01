@@ -19,9 +19,10 @@ class ExampleViewController: UIViewController {
     
     private var timePicker: RealTimePickerView = {
         let view = RealTimePickerView(format: .h24)
-        view.rowHeight = 60 // default row height is 80
-        view.colonLabelFont = UIFont.systemFont(ofSize: 32, weight: .bold) // default size is 40
-        view.timeLabelFont = UIFont.systemFont(ofSize: 44, weight: .semibold) // default size is 54
+        view.rowHeight = 60 // default row height is 60
+        view.timeLabelFont = UIFont.systemFont(ofSize: 44, weight: .semibold)
+        view.colonLabelFont = UIFont.systemFont(ofSize: 44 * 0.75, weight: .bold)
+        view.formatLabelFont = UIFont.systemFont(ofSize: 24, weight: .semibold)
         return view
     }()
     

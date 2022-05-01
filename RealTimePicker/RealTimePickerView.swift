@@ -28,7 +28,8 @@ import UIKit
 open class RealTimePickerView: UIView {
     private enum Constants {
         static let fontSize: CGFloat = 44
-        static let colorFontSize: CGFloat = 40
+        static let colonFontSize: CGFloat = Constants.fontSize * 0.75
+        static let formatFontSize: CGFloat = 24
     }
     public enum TimeFormat: String {
         case h12
@@ -65,8 +66,10 @@ open class RealTimePickerView: UIView {
     // MARK: - Public properties
     /// The default height in points of each row in the picker view.
     public var rowHeight: CGFloat = 60.0
-    /// The default label font of each row component in the picker view.
+    /// The default label font of each time row component in the picker view.
     public var timeLabelFont: UIFont?
+    /// The default label font of format (AM/PM) component in the picker view.
+    public var formatLabelFont: UIFont?
     /// The default font of colon between picker components
     public var colonLabelFont: UIFont? {
         didSet {
@@ -97,7 +100,7 @@ open class RealTimePickerView: UIView {
     }()
     private lazy var colonLabel: UILabel = {
         let label = UILabel()
-        let size = Constants.colorFontSize
+        let size = Constants.colonFontSize
         label.font = UIFont.systemFont(ofSize: size, weight: .bold)
         label.text = ":"
         return label
@@ -197,18 +200,15 @@ extension RealTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
     
     public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: Constants.fontSize, weight: .semibold)
         label.textAlignment = .center
-        if let customFont = timeLabelFont {
-            label.font = customFont
-        }
+        label.font = timeLabelFont ?? UIFont.systemFont(ofSize: Constants.fontSize, weight: .semibold)
         switch components[component]  {
         case .hour:
             label.text = String(format: "%02d", hours[row])
         case .minute:
             label.text = String(format: "%02d", minutes[row])
         case .format:
-            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+            label.font = formatLabelFont ?? UIFont.systemFont(ofSize: Constants.formatFontSize, weight: .bold)
             label.text = hourFormats[row].rawValue
         }
         return label
