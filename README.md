@@ -11,8 +11,8 @@
 | <img width=220px src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_1.png" /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_2.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_3.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_usage_1.png /> |
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Platform-iOS_12+-green.svg" alt="Platform: iOS 12.0+" />
-    <a href="https://developer.apple.com/swift" target="_blank"><img src="https://img.shields.io/badge/Language-Swift_5-blueviolet.svg" alt="Language: Swift 5" /></a>
+    <img src="https://img.shields.io/badge/Platform-iOS_11+-green.svg" alt="Platform: iOS 11.0+" />
+    <a href="https://developer.apple.com/swift" target="_blank"><img src="https://img.shields.io/badge/Language-Swift_4-blueviolet.svg" alt="Language: Swift 4+" /></a>
     <a href="https://cocoapods.org/pods/RealTimePicker" target="_blank"><img src="https://img.shields.io/badge/CocoaPods-v1.0-red.svg" alt="CocoaPods compatible" /></a>
     <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT" />
 </p>
@@ -22,7 +22,7 @@
 * <a href="https://guides.cocoapods.org/using/using-cocoapods.html" target="_blank">CocoaPods</a>:
 
 ```ruby
-pod 'RealTimePicker'
+pod 'RealTimePicker', '0.0.2'
 ```
 
 ## Usage
