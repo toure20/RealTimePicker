@@ -42,6 +42,15 @@ open class RealTimePickerView: UIView {
                 return Array(0...24)
             }
         }
+        
+        var components: [TimeComponent] {
+            switch self {
+            case .h12:
+                return [.hour, .minute, .format]
+            case .h24:
+                return [.hour, .minute]
+            }
+        }
     }
     public enum HourFormat: String, CaseIterable {
         case am = "AM"
@@ -54,7 +63,6 @@ open class RealTimePickerView: UIView {
     }
     
     // MARK: - Public properties
-    
     /// The default height in points of each row in the picker view.
     public var rowHeight: CGFloat = 60.0
     /// The default label font of each row component in the picker view.
@@ -72,9 +80,8 @@ open class RealTimePickerView: UIView {
     public var onNumberTimePicked: ((_ hour: Int, _ minute: Int) -> Void)?
     
     // MARK: - Private properties
-    private var components: [TimeComponent]
     private var timeFormat: TimeFormat
-    
+    private var components: [TimeComponent]
     private var hours: [Int]
     private var minutes: [Int] = Array(0...60)
     private var hourFormats: [HourFormat] = HourFormat.allCases
@@ -99,15 +106,9 @@ open class RealTimePickerView: UIView {
     private var leftConstraintAnchor: NSLayoutConstraint?
     
     public init(format: TimeFormat = .h24) {
-        switch format {
-        case .h12:
-            self.components = [.hour, .minute, .format]
-        case .h24:
-            self.components = [.hour, .minute]
-        }
-        self.hours = format.hours
         self.timeFormat = format
-        
+        self.components = format.components
+        self.hours = format.hours
         super.init(frame: .zero)
         setupViews()
         setupCurrentTime()
@@ -115,6 +116,14 @@ open class RealTimePickerView: UIView {
     
     required public init?(coder: NSCoder) {
         nil
+    }
+    
+    public func update(timeFormat: TimeFormat) {
+        self.timeFormat = timeFormat
+        self.components = timeFormat.components
+        self.hours = timeFormat.hours
+        pickerView.reloadAllComponents()
+        layoutSubviews()
     }
     
     open override func layoutSubviews() {
