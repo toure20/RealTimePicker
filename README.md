@@ -46,4 +46,4 @@ Check out the [Sample App](https://github.com/toure20/RealTimePicker/tree/master
 
 ## License
 
-<b>RealTimePicker</b> is released under a MIT License. See LICENSE file for details. Requires **iOS 12+** and is compatible with **Swift 5** projects.
+<b>RealTimePicker</b> is released under a MIT License. See LICENSE file for details. Requires **iOS 11+** and is compatible with **Swift 4+** projects.
