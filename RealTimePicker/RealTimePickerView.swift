@@ -86,7 +86,7 @@ open class RealTimePickerView: UIView {
     private var timeFormat: TimeFormat
     private var components: [TimeComponent]
     private var hours: [Int]
-    private var minutes: [Int] = Array(0...60)
+    private var minutes: [Int] = Array(0..<60)
     private var hourFormats: [HourFormat] = HourFormat.allCases
     
     private var selectedHour: Int?
