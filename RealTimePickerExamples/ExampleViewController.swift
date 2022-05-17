@@ -41,6 +41,7 @@ class ExampleViewController: UIViewController {
         view.formatLabelFont = UIFont.systemFont(ofSize: 24, weight: .semibold) // default size
         view.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         view.layer.cornerRadius = 24
+        view.showCurrentTime = true
         return view
     }()
     

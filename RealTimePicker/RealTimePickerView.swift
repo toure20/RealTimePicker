@@ -31,6 +31,7 @@ open class RealTimePickerView: UIView {
         static let colonFontSize: CGFloat = Constants.fontSize * 0.75
         static let formatFontSize: CGFloat = 24
     }
+    
     public enum TimeFormat: String {
         case h12
         case h24
@@ -53,10 +54,12 @@ open class RealTimePickerView: UIView {
             }
         }
     }
+    
     public enum HourFormat: String, CaseIterable {
         case am = "AM"
         case pm = "PM"
     }
+    
     public enum TimeComponent: Int, CaseIterable {
         case hour = 0
         case minute = 1
@@ -64,6 +67,15 @@ open class RealTimePickerView: UIView {
     }
     
     // MARK: - Public properties
+    
+    /// The default value in picker view with current time
+    public var showCurrentTime: Bool = false {
+        didSet {
+            if showCurrentTime {
+                updateDateTime(Date())
+            }
+        }
+    }
     /// The default height in points of each row in the picker view.
     public var rowHeight: CGFloat = 60.0
     /// The default label font of each time row component in the picker view.
@@ -83,6 +95,7 @@ open class RealTimePickerView: UIView {
     public var onNumberTimePicked: ((_ hour: Int, _ minute: Int) -> Void)?
     
     // MARK: - Private properties
+    
     private var timeFormat: TimeFormat
     private var components: [TimeComponent]
     private var hours: [Int]
@@ -94,10 +107,12 @@ open class RealTimePickerView: UIView {
     private var selectedHourFormat: HourFormat?
     
     // MARK: - Views
+    
     public var pickerView: UIPickerView = {
         let pickerView = UIPickerView()
         return pickerView
     }()
+    
     private lazy var colonLabel: UILabel = {
         let label = UILabel()
         let size = Constants.colonFontSize
@@ -116,7 +131,6 @@ open class RealTimePickerView: UIView {
         super.init(frame: .zero)
         self.tintColor = tintColor
         setupViews()
-        setupCurrentTime()
     }
     
     required public init?(coder: NSCoder) {
@@ -157,8 +171,8 @@ open class RealTimePickerView: UIView {
         pickerView.dataSource = self
     }
     
-    open func setupCurrentTime() {
-        let currentTime = Calendar.current.dateComponents([.hour, .minute, .second], from: Date())
+    open func updateDateTime(_ date: Date) {
+        let currentTime = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
         if var hour = currentTime.hour, components.count > TimeComponent.hour.rawValue {
             if timeFormat == .h12 && hour >= 12 {
                 hour -= 12
@@ -172,7 +186,6 @@ open class RealTimePickerView: UIView {
             default:
                 break
             }
-            print(hour)
             pickerView.selectRow(hour, inComponent: TimeComponent.hour.rawValue, animated: true)
             selectedHour = hour
             
@@ -185,6 +198,7 @@ open class RealTimePickerView: UIView {
 }
 
 extension RealTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return components.count
     }
