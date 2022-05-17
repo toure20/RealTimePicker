@@ -22,7 +22,7 @@
 * <a href="https://guides.cocoapods.org/using/using-cocoapods.html" target="_blank">CocoaPods</a>:
 
 ```ruby
-pod 'RealTimePicker', '0.0.2'
+pod 'RealTimePicker', '0.0.3'
 ```
 
 ## Usage
@@ -35,8 +35,10 @@ view.timeLabelFont = UIFont.systemFont(ofSize: 44, weight: .semibold) // default
 view.colonLabelFont = UIFont.systemFont(ofSize: 44 * 0.75, weight: .bold) // default size
 view.formatLabelFont = UIFont.systemFont(ofSize: 24, weight: .semibold) // default size is 24
 view.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+view.showCurrentTime = true
 view.layer.cornerRadius = 24
 ```
+Use `updateDateTime(_ date: Date)` function in order to set default time to picker view.
 
 ### Sample App
 
