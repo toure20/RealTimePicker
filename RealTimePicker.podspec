@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "RealTimePicker"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "Time picker written in Swift"
   spec.description  = "RealTimePicker is a time (hour, minute, second) picker based on UIPickerView."
   spec.homepage     = "https://github.com/toure20/RealTimePicker"
