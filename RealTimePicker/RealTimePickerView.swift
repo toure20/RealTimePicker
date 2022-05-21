@@ -174,9 +174,22 @@ open class RealTimePickerView: UIView {
     open func updateDateTime(_ date: Date) {
         let currentTime = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
         if var hour = currentTime.hour, components.count > TimeComponent.hour.rawValue {
-            if timeFormat == .h12 && hour >= 12 {
-                hour -= 12
-                selectedHourFormat =  hour < 12 ? .am : .pm
+            if timeFormat == .h12 {
+                selectedHourFormat = hour < 12 ? .am : .pm
+                /// 0:00 / midnight to 0:59 add 12 hours and AM to the time:
+                if hour == 0 {
+                    selectedHourFormat = .am
+                    hour += 12
+                }
+                /// From 1:00 to 11:59, simply add AM to the time:
+                if hour >= 1 && hour <= 11 {
+                    selectedHourFormat = .am
+                }
+                /// For times between 13:00 to 23:59, subtract 12 hours and add PM to the time:
+                if hour >= 13 && hour <= 23 {
+                    hour -= 12
+                    selectedHourFormat = .pm
+                }
             }
             switch selectedHourFormat {
             case .am:
@@ -186,7 +199,14 @@ open class RealTimePickerView: UIView {
             default:
                 break
             }
-            pickerView.selectRow(hour, inComponent: TimeComponent.hour.rawValue, animated: true)
+            switch timeFormat {
+            case .h12 where hours.first == 1:
+                pickerView.selectRow(hour - 1, inComponent: TimeComponent.hour.rawValue, animated: true)
+            case .h24:
+                pickerView.selectRow(hour, inComponent: TimeComponent.hour.rawValue, animated: true)
+            default:
+                break
+            }
             selectedHour = hour
             
             if let minute = currentTime.minute, components.count > TimeComponent.minute.rawValue {
@@ -248,12 +268,13 @@ extension RealTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         var calendar = Calendar.current
         calendar.timeZone = .current
         switch selectedHourFormat {
-        case .pm:
+        case .pm where hour >= 1 && hour <= 11:
             hour += 12
+        case .am where hour == 12:
+            hour -= 12
         default:
             break
         }
-        print(hour, minute)
         guard let date = calendar.date(bySettingHour: hour, minute: minute, second: 0, of:  Date()) else {
             return
         }
