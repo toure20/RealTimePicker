@@ -6,7 +6,7 @@
     <img src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/hour_min_screen.png" width="35%" height="35%" alt="Screenshot Preview" />
 </p> -->
 
-| 12-h format | 24-h format | Customizable | Example Usage |
+| 12-h format | 24-h format | Custom | Example Usage |
 | --- | --- | --- | --- |
 | <img width=220px src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_1.png" /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_2.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_3.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_usage_1.png /> |
 
