@@ -1,6 +1,7 @@
 # RealTimePicker
 
 ### RealTimePicker is an elegant and customizable time picker written in Swift.
+
 <!-- 
 <p align="center">
     <img src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/hour_min_screen.png" width="35%" height="35%" alt="Screenshot Preview" />
@@ -38,6 +39,7 @@ view.backgroundColor = UIColor.white.withAlphaComponent(0.9)
 view.showCurrentTime = true
 view.layer.cornerRadius = 24
 ```
+
 Use `updateDateTime(_ date: Date)` function in order to set default time to picker view.
 
 ### Sample App
