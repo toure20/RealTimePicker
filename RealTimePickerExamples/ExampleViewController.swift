@@ -34,12 +34,12 @@ class ExampleViewController: UIViewController {
     }()
     
     private var timePicker: RealTimePickerView = {
-        let view = RealTimePickerView(format: .h24, tintColor: .white)
+        let view = RealTimePickerView(format: .h24)
         view.rowHeight = 40 // default row height is 60
         view.timeLabelFont = UIFont.systemFont(ofSize: 32, weight: .semibold) // default size
         view.colonLabelFont = UIFont.systemFont(ofSize: 32 * 0.75, weight: .bold) // default size
         view.formatLabelFont = UIFont.systemFont(ofSize: 20, weight: .semibold) // default size
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        view.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         view.layer.cornerRadius = 24
         view.showCurrentTime = true
         return view
