@@ -23,7 +23,7 @@
 * <a href="https://guides.cocoapods.org/using/using-cocoapods.html" target="_blank">CocoaPods</a>:
 
 ```ruby
-pod 'RealTimePicker', '0.0.4'
+pod 'RealTimePicker', '0.0.5'
 ```
 
 ## Usage
