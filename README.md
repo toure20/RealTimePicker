@@ -7,9 +7,9 @@
     <img src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/hour_min_screen.png" width="35%" height="35%" alt="Screenshot Preview" />
 </p> -->
 
-| 12-h format | 24-h format | Custom | Example Usage |
+| 24-h format | 12-h format | Custom | Example |
 | --- | --- | --- | --- |
-| <img width=220px src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_1.png" /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_2.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_3.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/demo_picker.gif /> |
+| <img width=220px src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_1.png" /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_2.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_3.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/demo_1.gif /> |
 
 <p align="center">
     <img src="https://img.shields.io/badge/Platform-iOS_11+-green.svg" alt="Platform: iOS 11.0+" />
