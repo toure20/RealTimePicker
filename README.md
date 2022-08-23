@@ -32,9 +32,10 @@ RealTimePickerView was designed over UIPickerView and can be used to pick time (
 
 ```swift
 let view = RealTimePickerView(format: .h24, tintColor: .white)
-view.timeLabelFont = UIFont.systemFont(ofSize: 44, weight: .semibold) // default size is 44
-view.colonLabelFont = UIFont.systemFont(ofSize: 44 * 0.75, weight: .bold) // default size
-view.formatLabelFont = UIFont.systemFont(ofSize: 24, weight: .semibold) // default size is 24
+view.rowHeight = 40.0
+view.timeLabelFont = UIFont.systemFont(ofSize: 32, weight: .semibold) // default size is 44
+view.colonLabelFont = UIFont.systemFont(ofSize: 32 * 0.75, weight: .bold) // default size
+view.formatLabelFont = UIFont.systemFont(ofSize: 20, weight: .semibold) // default size is 24
 view.backgroundColor = UIColor.white.withAlphaComponent(0.9)
 view.showCurrentTime = true
 view.layer.cornerRadius = 24
