@@ -1,12 +1,13 @@
 # RealTimePicker
 
 ### RealTimePicker is an elegant and customizable time picker written in Swift.
+
 <!-- 
 <p align="center">
     <img src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/hour_min_screen.png" width="35%" height="35%" alt="Screenshot Preview" />
 </p> -->
 
-| 12-h format | 24-h format | Customizable | Example Usage |
+| 12-h format | 24-h format | Custom | Example Usage |
 | --- | --- | --- | --- |
 | <img width=220px src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_1.png" /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_2.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_screen_3.png /> | <img width=220px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/example_usage_1.png /> |
 
@@ -22,7 +23,7 @@
 * <a href="https://guides.cocoapods.org/using/using-cocoapods.html" target="_blank">CocoaPods</a>:
 
 ```ruby
-pod 'RealTimePicker', '0.0.3'
+pod 'RealTimePicker', '0.0.4'
 ```
 
 ## Usage
@@ -38,6 +39,7 @@ view.backgroundColor = UIColor.white.withAlphaComponent(0.9)
 view.showCurrentTime = true
 view.layer.cornerRadius = 24
 ```
+
 Use `updateDateTime(_ date: Date)` function in order to set default time to picker view.
 
 ### Sample App
