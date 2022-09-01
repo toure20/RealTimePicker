@@ -88,6 +88,12 @@ open class RealTimePickerView: UIView {
             colonLabel.font = colonLabelFont
         }
     }
+    // The default static ":" indicator between columns.
+    public var showUnitSeparator = true {
+        didSet {
+            colonLabel.isHidden = !showUnitSeparator
+        }
+    }
     
     /// Callback for pickerView(didSelectRow:) method in Date format
     public var onDateTimePicked: ((Date) -> Void)?
