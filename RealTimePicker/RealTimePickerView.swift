@@ -211,7 +211,7 @@ open class RealTimePickerView: UIView {
                 }
             }
             let neededRowIndex = hourRowsMiddle + hour
-            self.selectedHour = neededRowIndex
+            self.selectedHour = hour
             switch selectedHourFormat {
             case .am:
                 pickerView.selectRow(0, inComponent: TimeComponent.format.rawValue, animated: true)
@@ -232,7 +232,7 @@ open class RealTimePickerView: UIView {
         
         if let minute = currentTime.minute, components.count > TimeComponent.minute.rawValue {
             let neededRowIndex = minuteRowsMiddle + minute
-            self.selectedMinute = neededRowIndex
+            self.selectedMinute = minute
             pickerView.selectRow(neededRowIndex, inComponent: TimeComponent.minute.rawValue, animated: true)
         }
     }
