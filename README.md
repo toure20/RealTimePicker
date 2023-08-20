@@ -26,7 +26,7 @@
 pod 'RealTimePicker', '0.0.6'
 ```
 
-* Swift Package Manager
+* <a href="https://www.swift.org/package-manager">Swift Package Manager</a>
 
 ```ruby
 .package(url: "https://github.com/toure20/RealTimePicker", from: "0.0.6")
