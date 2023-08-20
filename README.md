@@ -20,10 +20,16 @@
 
 ## Installation
 
-* <a href="https://guides.cocoapods.org/using/using-cocoapods.html" target="_blank">CocoaPods</a>:
+* <a href="https://guides.cocoapods.org/using/using-cocoapods.html" target="_blank">CocoaPods</a>
 
 ```ruby
 pod 'RealTimePicker', '0.0.6'
+```
+
+* Swift Package Manager
+
+```ruby
+.package(url: "https://github.com/toure20/RealTimePicker", from: "0.0.6")
 ```
 
 ## Usage
