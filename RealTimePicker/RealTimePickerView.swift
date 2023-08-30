@@ -45,6 +45,18 @@ open class RealTimePickerView: UIView {
             }
         }
         
+        func getMinutes(usign interval: Int?) -> [Int] {
+            if let interval, interval > 0 {
+                var minutes: [Int] = []
+                for index in 0..<(60 / interval) {
+                    minutes.append(index * interval)
+                }
+                return minutes
+            } else {
+                return Array(0..<60)
+            }
+        }
+         
         var components: [TimeComponent] {
             switch self {
             case .h12:
@@ -88,7 +100,7 @@ open class RealTimePickerView: UIView {
             colonLabel.font = colonLabelFont
         }
     }
-    // The default static ":" indicator between columns.
+    /// The default static ":" indicator between columns.
     public var showUnitSeparator = true {
         didSet {
             colonLabel.isHidden = !showUnitSeparator
@@ -105,7 +117,7 @@ open class RealTimePickerView: UIView {
     private var timeFormat: TimeFormat
     private var components: [TimeComponent]
     private var hours: [Int]
-    private var minutes: [Int] = Array(0..<60)
+    private var minutes: [Int]
     private var hourFormats: [HourFormat] = HourFormat.allCases
     
     private var selectedHour: Int?
@@ -135,10 +147,11 @@ open class RealTimePickerView: UIView {
     
     private var leftConstraintAnchor: NSLayoutConstraint?
     
-    public init(format: TimeFormat = .h24, tintColor: UIColor = .black) {
+    public init(format: TimeFormat = .h24, tintColor: UIColor = .black, minuteInterval: Int? = nil) {
         self.timeFormat = format
         self.components = format.components
         self.hours = format.hours
+        self.minutes = format.getMinutes(usign: minuteInterval)
         super.init(frame: .zero)
         self.tintColor = tintColor
         setupViews()
