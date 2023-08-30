@@ -1,13 +1,13 @@
 # RealTimePicker
 
-### RealTimePicker is an elegant and customizable time picker written in Swift.
+### RealTimePicker is an elegant and customizable time picker written in Swift (UIKit).
 
 <!-- 
 <p align="center">
     <img src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/hour_min_screen.png" width="35%" height="35%" alt="Screenshot Preview" />
 </p> -->
 
-| 24-h format | 12-h format | Custom | Example |
+| 24-h format | 12-h format | Customize | Example |
 | --- | --- | --- | --- |
 | <img width=200px src="https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_1.png" /> | <img width=200px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_2.png /> | <img width=200px src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/screen_cropped_3.png /> | <img width=200px  src=https://github.com/toure20/RealTimePicker/blob/master/Screenshots/demo_1.gif /> |
 
@@ -46,8 +46,11 @@ view.backgroundColor = UIColor.white.withAlphaComponent(0.9)
 view.showCurrentTime = true
 view.layer.cornerRadius = 24
 ```
+## Last Updates
 
-Use `updateDateTime(_ date: Date)` function in order to set default time to picker view.
+- [x] `updateDateTime(_ date: Date)` function set default current time to picker view;
+- [x] `minuteInterval: Int?` initalizer property adjust minute rows data by interval.
+- [ ] Restrict time selection by using maximum and mininum properties
 
 ### Sample App
 
